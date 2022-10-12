@@ -1,8 +1,8 @@
-FROM alpine:3.8
+FROM alpine:3.16
 
 RUN apk update \
-    && apk add python py-pip rsyslog rsyslog-tls ca-certificates openssl \
-    && pip install awscli
+    && apk add --no-cache python py-pip rsyslog rsyslog-tls ca-certificates openssl \
+    && pip install --no-cache-dir awscli
 
 COPY run.py /run.py
 COPY crontab.txt /crontab.txt
