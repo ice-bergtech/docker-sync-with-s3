@@ -25,14 +25,14 @@ docker pull ghcr.io/ice-bergtech/docker-sync-with-s3:latest
 
 ## Expected Environment Variables
 
-1. `ACCESS_KEY` - AWS Access Key
-2. `SECRET_KEY` - AWS Secret Access Key
+1. `ACCESS_KEY` - S3 Access Key
+2. `SECRET_KEY` - S3 Secret Access Key
 3. `CRON_SCHEDULE` - Schedule for cron job, for every 15 minutes it would be: `*/15 * * * *`
 4. `SOURCE_PATH` - Source files to be synced, example: `/var/www/uploads`
 5. `DESTINATION_PATH` - Destination of where to sync files to, example: `s3://my-bucket/site-uploads`
 6. `BUCKET_LOCATION` - AWS Region for bucket, ex: `us-east-1`
 7. `LOGENTRIES_KEY` - (optional) If provided, the image will send command output to syslog with priority `user.info`.
-8. `S4SYNC_ARGS` - (optional) If provided, the arguments will be included in the `aws s3 sync` command. For example, setting `S4SYNC_ARGS=--delete` will cause files in the destination to be deleted if they no longer exist in the source.
+8. `S4SYNC_ARGS` - (optional) If provided, the arguments will be included in the `s4cmd dsync` command. For example, setting `S4SYNC_ARGS=--delete` will cause files in the destination to be deleted if they no longer exist in the source.
 9. `ENDPOINT_URL` - endpoint url used in boto3 client
 
 ## Volumes

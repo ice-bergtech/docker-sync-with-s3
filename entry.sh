@@ -12,8 +12,8 @@ fi
 
 # setup env
 echo "[default]"                              > /root/.s3cfg
-echo "aws_access_key_id = ${ACCESS_KEY}"     >> /root/.s3cfg
-echo "aws_secret_access_key = ${SECRET_KEY}" >> /root/.s3cfg
+echo "access_key = ${ACCESS_KEY}"     >> /root/.s3cfg
+echo "secret_key = ${SECRET_KEY}" >> /root/.s3cfg
 
 python3 /run.py
 
