@@ -3,7 +3,7 @@ FROM alpine:3.16
 RUN apk update \
     && apk add --update --no-cache python3 py-pip rsyslog rsyslog-tls ca-certificates openssl \
     && python3 -m ensurepip \
-    && pip3 install --no-cache --upgrade pip awscli
+    && pip3 install --no-cache --upgrade pip s4cmd
 
 COPY run.py /run.py
 COPY crontab.txt /crontab.txt
