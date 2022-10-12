@@ -13,7 +13,9 @@ fi
 # setup env
 echo "[default]"                              > /root/.s3cfg
 echo "access_key = ${ACCESS_KEY}"     >> /root/.s3cfg
-echo "secret_key = ${SECRET_KEY}" >> /root/.s3cfg
+echo "access_token = ${SECRET_KEY}" >> /root/.s3cfg
+echo "bucket_location = ${BUCKET_LOCATION}" >> /root/.s3cfg
+echo "host_base = ${ENDPOINT_URL}" >> /root/.s3cfg
 
 python3 /run.py
 
