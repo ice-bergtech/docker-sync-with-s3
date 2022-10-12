@@ -5,7 +5,7 @@ services:
     environment:
       ACCESS_KEY: 
       SECRET_KEY: 
-      CRON_SCHEDULE: */0 12 * * * # Schedule for cron job, for every 15 minutes it would be: `*/15 * * * *`
+      CRON_SCHEDULE: '*/0 12 * * *' # Schedule for cron job, for every 15 minutes it would be: `*/15 * * * *`
       SOURCE_PATH: /data # Source files to be synced, example: `/data`
       DESTINATION_PATH: s3://my-bucket/site-uploads # Destination of where to sync files to, example: `s3://my-bucket/site-uploads`
       BUCKET_LOCATION: # AWS Region for bucket, ex: `us-east-1`
