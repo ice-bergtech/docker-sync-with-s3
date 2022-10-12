@@ -13,6 +13,4 @@ COPY entry.sh /entry.sh
 
 RUN chmod 755 /entry.sh
 
-USER 1000:1000
-
 CMD ["/entry.sh"]

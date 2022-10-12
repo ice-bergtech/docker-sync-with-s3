@@ -18,7 +18,7 @@ echo "[default]"                              > /root/.aws/credentials
 echo "aws_access_key_id = ${ACCESS_KEY}"     >> /root/.aws/credentials
 echo "aws_secret_access_key = ${SECRET_KEY}" >> /root/.aws/credentials
 
-python /run.py
+python3 /run.py
 
 # start cron
 crond -f
