@@ -9,8 +9,9 @@ services:
       SOURCE_PATH: /data # Source files to be synced, example: `/data`
       DESTINATION_PATH: s3://my-bucket/site-uploads # Destination of where to sync files to, example: `s3://my-bucket/site-uploads`
       BUCKET_LOCATION: # AWS Region for bucket, ex: `us-east-1`
+      ENDPOINT_URL: '' # bucket endpoint
       # LOGENTRIES_KEY: #(optional) If provided, the image will send command output to syslog with priority `user.info`.
-      # S4SYNC_ARGS: # (optional) If provided, the arguments will be included in the `aws s3 sync` command. For example, setting `S4SYNC_ARGS=--delete` will cause files in the destination to be deleted if they no longer exist in the source.
+      # S3SYNC_ARGS: # (optional) If provided, the arguments will be included in the `aws s3 sync` command. For example, setting `S3SYNC_ARGS=--delete` will cause files in the destination to be deleted if they no longer exist in the source.
     volumes:
       # - ":/data/default:ro"
       - "data_BACKUPS:/data/backups:ro"

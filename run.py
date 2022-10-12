@@ -6,10 +6,10 @@ cron_schedule = os.environ.get('CRON_SCHEDULE')
 source_path = os.environ.get('SOURCE_PATH')
 destination_path = os.environ.get('DESTINATION_PATH')
 endpoint_url = os.environ.get('ENDPOINT_URL')
-S4SYNC_ARGS = os.environ.get('S4SYNC_ARGS')
+S3SYNC_ARGS = os.environ.get('S3SYNC_ARGS')
 
-if S4SYNC_ARGS == None:
-    S4SYNC_ARGS = ""
+if S3SYNC_ARGS == None:
+    S3SYNC_ARGS = ""
 
 
 # create dictionary of environment variables
@@ -21,7 +21,7 @@ env_dict['CRON_SCHEDULE'] = cron_schedule
 env_dict['SOURCE_PATH'] = source_path
 env_dict['DESTINATION_PATH'] = destination_path
 env_dict['ENDPOINT_URL'] = endpoint_url
-env_dict['S4SYNC_ARGS'] = S4SYNC_ARGS
+env_dict['S3SYNC_ARGS'] = S3SYNC_ARGS
 
 
 # function to add environment variables to file
