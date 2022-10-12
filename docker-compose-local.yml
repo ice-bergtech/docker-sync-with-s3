@@ -1,0 +1,11 @@
+version: '3'
+sync-s3:
+  build: .
+  env_file:
+    - local.env
+  volumes:
+      # - ":/data/default:ro"
+      - "info_2_go:/data:ro"
+  
+volumes:
+  info_2_go:
